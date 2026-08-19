@@ -93,15 +93,6 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* WhatsApp CTA */
-.navbar__whatsapp {
-  padding: var(--space-2) var(--space-5);
-  font-size: var(--text-sm);
-  letter-spacing: 0.5px;
-  border-radius: var(--radius-full);
-  flex-shrink: 0;
-}
-
 /* Mobile Toggle */
 .navbar__toggle {
   display: none;
@@ -161,21 +152,9 @@
   padding-left: var(--space-6);
 }
 
-.navbar__mobile-whatsapp {
-  margin-top: var(--space-8);
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-md);
-  font-size: var(--text-sm);
-  justify-content: center;
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
   .navbar__links {
-    display: none;
-  }
-
-  .navbar__whatsapp {
     display: none;
   }
 

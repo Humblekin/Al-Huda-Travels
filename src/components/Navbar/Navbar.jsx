@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa6';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import useScrollPosition from '../../hooks/useScrollPosition';
 import './Navbar.css';
@@ -41,8 +40,6 @@ export default function Navbar() {
     }
   };
 
-  const whatsappUrl = 'https://wa.me/233261834931?text=Assalamu%20Alaikum.%20I%20would%20like%20to%20enquire%20about%20your%20Hajj%20and%20Umrah%20services.';
-
   return (
     <motion.nav
       className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}
@@ -74,12 +71,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        {/* WhatsApp CTA */}
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="navbar__whatsapp btn btn-whatsapp">
-          <FaWhatsapp size={18} />
-          <span>WhatsApp Us</span>
-        </a>
 
         {/* Mobile Toggle */}
         <button
@@ -120,18 +111,6 @@ export default function Navbar() {
                   </motion.li>
                 ))}
               </ul>
-              <motion.a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="navbar__mobile-whatsapp btn btn-whatsapp"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.4 }}
-              >
-                <FaWhatsapp size={20} />
-                <span>WhatsApp Us</span>
-              </motion.a>
             </div>
           </motion.div>
         )}
