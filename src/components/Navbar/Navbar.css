@@ -163,9 +163,9 @@
 
 .navbar__mobile-whatsapp {
   margin-top: var(--space-8);
-  padding: var(--space-4);
-  border-radius: var(--radius-lg);
-  font-size: var(--text-base);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
   justify-content: center;
 }
 
@@ -188,7 +188,7 @@
 
 @media (max-width: 480px) {
   .navbar__logo-name {
-    font-size: var(--text-base);
+    font-size: var(--text-lg);
   }
 
   .navbar__logo-icon {
