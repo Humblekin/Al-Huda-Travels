@@ -1,0 +1,192 @@
+/* ====================================================
+   Guide Section
+   ==================================================== */
+.guide__categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+}
+
+.guide__category-btn {
+  padding: var(--space-2) var(--space-5);
+  background: var(--color-white);
+  border: 1px solid rgba(197, 163, 85, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--color-text-medium);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: all var(--transition-base);
+}
+
+.guide__category-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.guide__category-btn--active {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.guide__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.guide__card {
+  background: var(--color-white);
+  border: 1px solid rgba(197, 163, 85, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.guide__card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(197, 163, 85, 0.4);
+}
+
+.guide__card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.guide__card-icon {
+  color: var(--color-emerald);
+  font-size: 1.25rem;
+}
+
+.guide__card-category {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.guide__card-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+  color: var(--color-charcoal);
+  line-height: 1.4;
+}
+
+.guide__card-summary {
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  margin-bottom: var(--space-5);
+  flex-grow: 1;
+}
+
+.guide__card-readmore {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-emerald);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  transition: color var(--transition-fast);
+}
+
+.guide__card:hover .guide__card-readmore {
+  color: var(--color-emerald-deep);
+}
+
+/* Modal */
+.guide__modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.guide__modal-content {
+  background: var(--color-ivory);
+  width: 100%;
+  max-width: 700px;
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.guide__modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: 2rem;
+  color: var(--color-text-light);
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+
+.guide__modal-close:hover {
+  color: var(--color-charcoal);
+}
+
+.guide__modal-header {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(197, 163, 85, 0.2);
+}
+
+.guide__modal-category {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-gold-pale);
+  color: var(--color-gold);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-3);
+}
+
+.guide__modal-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  color: var(--color-charcoal);
+}
+
+.guide__modal-body {
+  font-size: var(--text-base);
+  color: var(--color-text-medium);
+  line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+  .guide__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .guide__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide__modal-content {
+    padding: var(--space-6);
+  }
+
+  .guide__modal-title {
+    font-size: var(--text-2xl);
+  }
+}

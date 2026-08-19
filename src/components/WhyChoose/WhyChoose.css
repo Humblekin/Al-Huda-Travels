@@ -1,0 +1,61 @@
+/* ====================================================
+   Why Choose Al-Huda Section
+   ==================================================== */
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.why-choose__card {
+  text-align: center;
+  padding: var(--space-10) var(--space-6);
+  border-radius: var(--radius-lg);
+  background: var(--color-ivory);
+  border: 1px solid rgba(197, 163, 85, 0.08);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.why-choose__card:hover {
+  border-color: rgba(197, 163, 85, 0.25);
+  box-shadow: var(--shadow-lg);
+}
+
+.why-choose__icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-emerald-deep), var(--color-emerald));
+  color: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-emerald);
+}
+
+.why-choose__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.why-choose__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .why-choose__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+  }
+}

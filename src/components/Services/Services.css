@@ -1,0 +1,104 @@
+/* ====================================================
+   Services Section
+   ==================================================== */
+.services {
+  background-color: var(--color-ivory);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* Service Card */
+.service-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) var(--space-8);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(197, 163, 85, 0.1);
+  transition: border-color var(--transition-base);
+}
+
+.service-card:hover {
+  border-color: rgba(197, 163, 85, 0.3);
+}
+
+.service-card__icon-wrap {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-emerald-pale), rgba(13, 122, 74, 0.08));
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(13, 122, 74, 0.1);
+  transition: all var(--transition-base);
+}
+
+.service-card:hover .service-card__icon-wrap {
+  background: linear-gradient(135deg, var(--color-emerald-deep), var(--color-emerald));
+  border-color: var(--color-emerald);
+}
+
+.service-card__icon {
+  font-size: 1.75rem;
+  color: var(--color-emerald);
+  transition: color var(--transition-base);
+}
+
+.service-card:hover .service-card__icon {
+  color: var(--color-white);
+}
+
+.service-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-3);
+}
+
+.service-card__description {
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  line-height: 1.7;
+}
+
+.service-card__accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-emerald));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.service-card:hover .service-card__accent {
+  transform: scaleX(1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .service-card {
+    padding: var(--space-8) var(--space-6);
+  }
+}

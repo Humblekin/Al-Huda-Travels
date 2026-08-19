@@ -1,0 +1,118 @@
+/* ====================================================
+   About Section
+   ==================================================== */
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+  margin-bottom: var(--space-16);
+}
+
+.about__image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about__image-wrap img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.about__image-accent {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+}
+
+.about__intro {
+  font-family: var(--font-accent);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--color-charcoal);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-6);
+  border-left: 3px solid var(--color-gold);
+}
+
+.about__body {
+  font-size: var(--text-base);
+  color: var(--color-text-medium);
+  line-height: 1.8;
+}
+
+/* Values */
+.about__values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.about__value-card {
+  text-align: center;
+  padding: var(--space-10) var(--space-6);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(197, 163, 85, 0.1);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.about__value-card:hover {
+  border-color: rgba(197, 163, 85, 0.3);
+  box-shadow: var(--shadow-lg);
+}
+
+.about__value-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-gold-pale), rgba(197, 163, 85, 0.1));
+  border-radius: 50%;
+  color: var(--color-gold);
+  border: 1px solid rgba(197, 163, 85, 0.2);
+}
+
+.about__value-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.about__value-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .about__image-wrap img {
+    height: 280px;
+  }
+
+  .about__image-accent {
+    display: none;
+  }
+
+  .about__values {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
